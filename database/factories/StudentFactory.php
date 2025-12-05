@@ -23,8 +23,6 @@ class StudentFactory extends Factory
             //penulisan nama kolom harus sama persis dengan kolom pada tabel
             //untuk grade memakai faker randomElement(['11 PPLG 1', '10 PPLG1',etc])
             'name'      => fake()->name(),
-            'birthday'  => fake()->date(),
-            'gender'    => fake()->randomElement(['Laki-laki', 'Perempuan']),
             'classroom_id'     => Classroom::factory(),
             'email'     => fake()->unique()->safeEmail(),
             'address'   => fake()->address(),

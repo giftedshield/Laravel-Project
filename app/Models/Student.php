@@ -10,8 +10,18 @@ class Student extends Model
     /** @use HasFactory<\Database\Factories\StudentFactory> */
     use HasFactory;
 
-    public function classroom(){
-        //kasih tau bahwa student hanya punya 1 classroom => belongsTo
+    protected $with = ['classroom'];
+
+    // Tambahkan semua kolom yang boleh diisi massal
+    protected $fillable = [
+        'name',
+        'classroom_id',
+        'email',
+        'address',
+    ];
+
+    public function classroom()
+    {
         return $this->belongsTo(Classroom::class, 'classroom_id');
     }
 }

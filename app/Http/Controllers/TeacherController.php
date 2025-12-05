@@ -12,6 +12,6 @@ class TeacherController extends Controller
         return view('teacher', [
             'title' => 'Teacher',
             'teachers' => $teachers
-        ]);
+        ]); 
     }
 }

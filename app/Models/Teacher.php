@@ -9,6 +9,8 @@ class Teacher extends Model
 {
     use HasFactory;
 
+    protected $with = ['subject'];
+
     public function subject()
     {
         return $this->belongsTo(Subject::class, 'subject_id');

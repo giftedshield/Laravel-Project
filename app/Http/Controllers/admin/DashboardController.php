@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
-use App\Models\Student;  //panngil model student
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class StudentsController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $students = Student::with('classroom')->get(); //panggil semua data di model student
-
-        return view('students',[
-            'title'   => "Students",
-            'students' => $students
+        return view('admin.dashboard',[
+            'title' => 'Dashboard'
         ]);
     }
 

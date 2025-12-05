@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:judul>{{ $title }}</x-slot:judul>
     
-    <h3>INI HALAMAN HOME</h3>
+    <h3>home</h3>
 
 </x-layout>
